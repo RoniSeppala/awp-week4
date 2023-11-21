@@ -3,7 +3,6 @@ const contentDiv = document.getElementById("displaydiv")
 async function displayRecipe(food){
     foodres = await fetch("/recipe/" + food);
     foodData = await foodres.json()
-    console.log(foodData)
     
     const foodTitle = document.createElement("h2")
     foodTitle.innerText = foodData.name

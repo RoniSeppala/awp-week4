@@ -17,8 +17,13 @@ const recipeJSON = {
 
 }
 
+router.post('/',(req,res) => {
+    console.log("got int post")
+
+    res.send(req.body)
+})
+
 router.get("/:food",(req, res) => {
-    console.log("got into recipe")
     recipeJSON.name = req.params.food
     
     res.json(recipeJSON)
